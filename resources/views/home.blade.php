@@ -888,7 +888,7 @@
     <section class="carousel-section" id="portfolio">
         <div class="container">
             <div class="label reveal">📁 @lang('home.portfolio')</div>
-            <h2 class="section-title reveal">@lang('home.projects_title')</h2>
+            <h2 class="section-title reveal"><span style="color: var(--primary); text-shadow: 0 0 8px rgba(59,130,246,0.45);">@lang('home.projects_title')</span></h2>
             <p class="section-desc reveal" style="margin-bottom:2.5rem;">@lang('home.projects_description')</p>
 
             <div class="carousel-outer reveal">

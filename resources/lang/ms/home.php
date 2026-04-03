@@ -36,7 +36,7 @@ return [
     'service_tag_cloud' => 'AWS · Azure · GCP',
     'service_tag_support' => 'Helpdesk · On-site · Remote',
     'service_tag_software' => 'Mobile · ERP · API',
-    'projects_title' => 'PROJEK TERKINI KAMI',
+    'projects_title' => 'PROJEK TERBARU KAMI',
     'projects_description' => 'Sebahagian projek yang telah kami lengkapkan untuk pelanggan.',
     'project_web_name' => 'Sistem eCommerce untuk syarikat runcit',
     'project_web_desc' => 'Platform beli dan jual dalam talian lengkap dengan inventori, pembayaran, dan papan pemuka analitik.',
