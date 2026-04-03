@@ -18,7 +18,7 @@ return [
     'what_we_offer' => 'What We Offer',
     'services_desc' => 'Comprehensive IT solutions to ensure your business runs smoothly and securely.',
     'why_choose_us' => 'Why Choose Us',
-    'the_rest' => 'From The Rest',
+    'the_rest' => 'Then Others',
     'longterm_partner' => 'Waffle Network is not just an IT vendor — we are a long-term technology partner for your business.',
     'free_consultation' => 'Free Consultation',
     'quote_24h' => 'Quote Within 24 Hours',
