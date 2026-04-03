@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="{{ app()->getLocale() }}" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waffle Network</title>
+    <title>@lang('home.website_title')</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v=3">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}?v=3">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}?v=3">
@@ -788,22 +788,22 @@
                 <div class="hero-visual">
                     <div class="hero-card">
                         <div class="card-icon-wrap icon-blue">🌐</div>
-                        <h4>Web Development</h4>
-                        <p>Modern & responsive websites for your business</p>
+                        <h4>@lang('home.service_web_development_name')</h4>
+                        <p>@lang('home.service_web_development_desc')</p>
                         <div class="hero-stat">
                             <span class="stat-num">50+</span>
-                            <span class="stat-label">projects completed</span>
+                            <span class="stat-label">@lang('home.projects_completed')</span>
                         </div>
                     </div>
                     <div class="hero-card">
                         <div class="card-icon-wrap icon-red">🔒</div>
-                        <h4>Cybersecurity</h4>
-                        <p>Protect your systems from cyber threats</p>
+                        <h4>@lang('home.service_cybersecurity_name')</h4>
+                        <p>@lang('home.service_cybersecurity_desc')</p>
                     </div>
                     <div class="hero-card">
                         <div class="card-icon-wrap icon-purple">☁️</div>
-                        <h4>Cloud Services</h4>
-                        <p>Scalable cloud infrastructure</p>
+                        <h4>@lang('home.service_cloud_services_name')</h4>
+                        <p>@lang('home.service_cloud_services_desc')</p>
                     </div>
                 </div>
             </div>
@@ -846,39 +846,39 @@
             <div class="services-grid">
                 <div class="service-card reveal delay-1">
                     <div class="service-icon icon-blue">🌐</div>
-                    <h3>Web Development</h3>
-                    <p>Development of modern, fast, and responsive websites and web applications using the latest technology.</p>
-                    <span class="service-tag">Laravel · React · PHP</span>
+                    <h3>@lang('home.service_web_development_name')</h3>
+                    <p>@lang('home.service_web_development_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_web')</span>
                 </div>
                 <div class="service-card reveal delay-2">
                     <div class="service-icon icon-teal">🔗</div>
-                    <h3>Network & Infrastructure</h3>
-                    <p>Design, installation, and maintenance of stable and secure corporate networks.</p>
-                    <span class="service-tag">Cisco · Mikrotik · Fiber</span>
+                    <h3>@lang('home.service_network_infrastructure_name')</h3>
+                    <p>@lang('home.service_network_infrastructure_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_network')</span>
                 </div>
                 <div class="service-card reveal delay-3">
                     <div class="service-icon icon-red">🔒</div>
-                    <h3>Cybersecurity</h3>
-                    <p>Security assessments, penetration testing, and system protection from the latest cyber threats.</p>
-                    <span class="service-tag">Firewall · VPN · SOC</span>
+                    <h3>@lang('home.service_cybersecurity_name')</h3>
+                    <p>@lang('home.service_cybersecurity_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_security')</span>
                 </div>
                 <div class="service-card reveal delay-4">
                     <div class="service-icon icon-purple">☁️</div>
-                    <h3>Cloud Services</h3>
-                    <p>Cloud migration, infrastructure management, and cost optimization for AWS, Azure, and GCP.</p>
-                    <span class="service-tag">AWS · Azure · GCP</span>
+                    <h3>@lang('home.service_cloud_services_name')</h3>
+                    <p>@lang('home.service_cloud_services_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_cloud')</span>
                 </div>
                 <div class="service-card reveal delay-5">
                     <div class="service-icon icon-orange">🛠️</div>
-                    <h3>IT Support & Maintenance</h3>
-                    <p>24/7 technical support, regular system maintenance, and fast IT troubleshooting.</p>
-                    <span class="service-tag">Helpdesk · On-site · Remote</span>
+                    <h3>@lang('home.service_it_support_name')</h3>
+                    <p>@lang('home.service_it_support_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_support')</span>
                 </div>
                 <div class="service-card reveal delay-6">
                     <div class="service-icon icon-green">💻</div>
-                    <h3>Software Development</h3>
-                    <p>Development of custom software, ERP systems, mobile applications, and API integration according to business needs.</p>
-                    <span class="service-tag">Mobile · ERP · API</span>
+                    <h3>@lang('home.service_software_development_name')</h3>
+                    <p>@lang('home.service_software_development_desc')</p>
+                    <span class="service-tag">@lang('home.service_tag_software')</span>
                 </div>
             </div>
         </div>
@@ -887,62 +887,62 @@
     {{-- ===== PORTFOLIO CAROUSEL ===== --}}
     <section class="carousel-section" id="portfolio">
         <div class="container">
-            <div class="label reveal">📁 Portfolios</div>
-            <h2 class="section-title reveal">OUR <span style="color:var(--primary)">LATEST</span> PROJECTS</h2>
-            <p class="section-desc reveal" style="margin-bottom:2.5rem;">Part of the projects we’ve completed for our clients.</p>
+            <div class="label reveal">📁 @lang('home.portfolio')</div>
+            <h2 class="section-title reveal">@lang('home.projects_title')</h2>
+            <p class="section-desc reveal" style="margin-bottom:2.5rem;">@lang('home.projects_description')</p>
 
             <div class="carousel-outer reveal">
                 <div class="carousel-track" id="track">
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">Web Development</span>
-                            <h3 style="margin-top:0.75rem;">eCommerce system for a retail company</h3>
-                            <p>Online buying and selling platform complete with inventory system, automatic payments, and analytics dashboard for local retail clients.</p>
+                            <span class="slide-tag">@lang('home.service_web_development_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_web_name')</h3>
+                            <p>@lang('home.project_web_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">Laravel · MySQL · Payment Gateway</p>
                         </div>
                         <div class="slide-visual slide-v1">🛒</div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">Network & Infrastructure</span>
-                            <h3 style="margin-top:0.75rem;">Corporate network for 500 users</h3>
-                            <p>Design and installation of enterprise network for a multinational company with 3 branches and over 500 concurrent users.</p>
+                            <span class="slide-tag">@lang('home.service_network_infrastructure_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_network_name')</h3>
+                            <p>@lang('home.project_network_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">Cisco · Fortinet · SD-WAN</p>
                         </div>
                         <div class="slide-visual slide-v2">🔗</div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">Cybersecurity</span>
-                            <h3 style="margin-top:0.75rem;">Security audit for a financial firm</h3>
-                            <p>Comprehensive security assessment including penetration testing, vulnerability assessment, and SOC implementation for financial institutions.</p>
+                            <span class="slide-tag">@lang('home.service_cybersecurity_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_security_name')</h3>
+                            <p>@lang('home.project_security_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">SIEM · WAF · ISO 27001</p>
                         </div>
                         <div class="slide-visual slide-v3">🔒</div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">Cloud Services</span>
-                            <h3 style="margin-top:0.75rem;">Cloud migration for a logistics company</h3>
-                            <p>Migration of on-premise infrastructure to AWS with zero downtime, saving 40% in annual operational costs for clients in the logistics sector.</p>
+                            <span class="slide-tag">@lang('home.service_cloud_services_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_cloud_name')</h3>
+                            <p>@lang('home.project_cloud_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">AWS · Terraform · Docker</p>
                         </div>
                         <div class="slide-visual slide-v4">☁️</div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">Software Development</span>
-                            <h3 style="margin-top:0.75rem;">eCommerce system for a retail company</h3>
-                            <p>Online buying and selling platform complete with inventory system, automatic payments, and analytics dashboard for local retail clients.</p>
+                            <span class="slide-tag">@lang('home.service_software_development_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_software_name')</h3>
+                            <p>@lang('home.project_software_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">PHP · Vue.js · MySQL</p>
                         </div>
                         <div class="slide-visual slide-v5">💻</div>
                     </div>
                     <div class="carousel-slide">
                         <div class="slide-content">
-                            <span class="slide-tag">IT Support</span>
-                            <h3 style="margin-top:0.75rem;">IT support contract for a private hospital</h3>
-                            <p>Comprehensive IT infrastructure management for a private hospital with a 99.99% uptime SLA and 24/7 technical support throughout the year.</p>
+                            <span class="slide-tag">@lang('home.service_it_support_name')</span>
+                            <h3 style="margin-top:0.75rem;">@lang('home.project_it_name')</h3>
+                            <p>@lang('home.project_it_desc')</p>
                             <p style="font-size:0.82rem;color:var(--text-muted);">Helpdesk · On-site · ITIL</p>
                         </div>
                         <div class="slide-visual slide-v6">🏥</div>
@@ -980,29 +980,29 @@
                         <div class="why-item reveal delay-1">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Experienced Team</h4>
-                                <p>Certified engineers with over 5 years of experience across various industries and technologies.</p>
+                                <h4>@lang('home.check_experienced_team')</h4>
+                                <p>@lang('home.check_experienced_team_desc')</p>
                             </div>
                         </div>
                         <div class="why-item reveal delay-2">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Fast Response</h4>
-                                <p>SLA guaranteed with response time under 1 hour for critical issues and 24/7/365 support.</p>
+                                <h4>@lang('home.check_fast_response')</h4>
+                                <p>@lang('home.check_fast_response_desc')</p>
                             </div>
                         </div>
                         <div class="why-item reveal delay-3">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Transparent Pricing</h4>
-                                <p>No hidden fees. Clear and competitive pricing based on your actual needs.</p>
+                                <h4>@lang('home.check_transparent_pricing')</h4>
+                                <p>@lang('home.check_transparent_pricing_desc')</p>
                             </div>
                         </div>
                         <div class="why-item reveal delay-4">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Custom Solutions</h4>
-                                <p>We design solutions tailored to your specific business requirements, not generic templates.</p>
+                                <h4>@lang('home.check_custom_solutions')</h4>
+                                <p>@lang('home.check_custom_solutions_desc')</p>
                             </div>
                         </div>
                     </div>
@@ -1011,19 +1011,19 @@
                 <div class="why-metrics">
                     <div class="metric reveal delay-1">
                         <h3>100+</h3>
-                        <p>Active Clients</p>
+                        <p>@lang('home.active_clients')</p>
                     </div>
                     <div class="metric reveal delay-2">
                         <h3>99.9%</h3>
-                        <p>Uptime SLA</p>
+                        <p>@lang('home.uptime_sla')</p>
                     </div>
                     <div class="metric reveal delay-3">
                         <h3>&lt;1j</h3>
-                        <p>Response Time</p>
+                        <p>@lang('home.response_time')</p>
                     </div>
                     <div class="metric reveal delay-4">
                         <h3>5★</h3>
-                        <p>Client Rating</p>
+                        <p>@lang('home.client_rating')</p>
                     </div>
                 </div>
             </div>
@@ -1045,22 +1045,22 @@
                         <div class="why-item reveal delay-1">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Free Consultation</h4>
-                                <p>Initial consultation session with no obligation to understand your needs.</p>
+                                <h4>@lang('home.free_consultation')</h4>
+                                <p>@lang('home.free_consultation_desc')</p>
                             </div>
                         </div>
                         <div class="why-item reveal delay-2">
                             <div class="check">✓</div>
                             <div>
-                                <h4>Quote Within 24 Hours</h4>
-                                <p>We will provide a detailed proposal and quote quickly.</p>
+                                <h4>@lang('home.quote_24h')</h4>
+                                <p>@lang('home.quote_24h_desc')</p>
                             </div>
                         </div>
                         <div class="why-item reveal delay-3">
                             <div class="check">✓</div>
                             <div>
-                                <h4>No Upfront Commitment</h4>
-                                <p>You are free to make a decision without any pressure from us.</p>
+                                <h4>@lang('home.no_commitment')</h4>
+                                <p>@lang('home.no_commitment_desc')</p>
                             </div>
                         </div>
                     </div>
@@ -1113,14 +1113,14 @@
                                 style="width:100%; padding:10px 14px; border:1px solid var(--border); border-radius:7px; background:var(--bg); color:var(--text); font-size:0.9rem; font-family:'Inter',sans-serif; outline:none; transition:border 0.2s; cursor:pointer;"
                                 onfocus="this.style.borderColor='var(--primary)'"
                                 onblur="this.style.borderColor='var(--border)'">
-                                <option value="">-- Choose Service --</option>
-                                <option value="Web Development" {{ old('service') == 'Web Development' ? 'selected' : '' }}>Web Development</option>
-                                <option value="Network & Infrastructure" {{ old('service') == 'Network & Infrastructure' ? 'selected' : '' }}>Network & Infrastructure</option>
-                                <option value="Cybersecurity" {{ old('service') == 'Cybersecurity' ? 'selected' : '' }}>Cybersecurity</option>
-                                <option value="Cloud Services" {{ old('service') == 'Cloud Services' ? 'selected' : '' }}>Cloud Services</option>
-                                <option value="IT Support & Maintenance" {{ old('service') == 'IT Support & Maintenance' ? 'selected' : '' }}>IT Support & Maintenance</option>
-                                <option value="Software Development" {{ old('service') == 'Software Development' ? 'selected' : '' }}>Software Development</option>
-                                <option value="Others" {{ old('service') == 'Others' ? 'selected' : '' }}>Others</option>
+                                <option value="">@lang('home.choose_service')</option>
+                                <option value="Web Development" {{ old('service') == 'Web Development' ? 'selected' : '' }}>@lang('home.service_web_development_name')</option>
+                                <option value="Network & Infrastructure" {{ old('service') == 'Network & Infrastructure' ? 'selected' : '' }}>@lang('home.service_network_infrastructure_name')</option>
+                                <option value="Cybersecurity" {{ old('service') == 'Cybersecurity' ? 'selected' : '' }}>@lang('home.service_cybersecurity_name')</option>
+                                <option value="Cloud Services" {{ old('service') == 'Cloud Services' ? 'selected' : '' }}>@lang('home.service_cloud_services_name')</option>
+                                <option value="IT Support & Maintenance" {{ old('service') == 'IT Support & Maintenance' ? 'selected' : '' }}>@lang('home.service_it_support_name')</option>
+                                <option value="Software Development" {{ old('service') == 'Software Development' ? 'selected' : '' }}>@lang('home.service_software_development_name')</option>
+                                <option value="Others" {{ old('service') == 'Others' ? 'selected' : '' }}>@lang('home.others')</option>
                             </select>
                             @error('service') <p style="color:#ef4444; font-size:0.8rem; margin-top:4px;">{{ $message }}</p> @enderror
                         </div>
@@ -1139,7 +1139,7 @@
                             style="width:100%; padding:12px; background:var(--primary); color:white; border:none; border-radius:7px; font-size:0.95rem; font-weight:700; cursor:pointer; font-family:'Inter',sans-serif; transition:background 0.2s;"
                             onmouseover="this.style.background='var(--primary-dark)'"
                             onmouseout="this.style.background='var(--primary)'">
-                            Send Message →
+                            @lang('home.send_message')
                         </button>
                     </form>
                 </div>
