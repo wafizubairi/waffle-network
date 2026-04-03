@@ -1156,7 +1156,7 @@
 
     {{-- ===== FOOTER ===== --}}
     <footer>
-        <p>© {{ date('Y') }} Waffle Network Sdn. Bhd. — IT Solutions</p>
+        <p>© {{ date('Y') }} Waffle Network </p>
         <div class="footer-links">
             <a href="#">@lang('home.privacy')</a>
             <a href="#">@lang('home.terms')</a>
