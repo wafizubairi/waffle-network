@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waffle Network — IT Solutions</title>
+    <title>Waffle Network</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
