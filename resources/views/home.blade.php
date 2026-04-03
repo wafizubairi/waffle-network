@@ -1151,7 +1151,7 @@
     <section style="background:var(--primary-dark); padding:60px 6%; text-align:center;">
         <h2 style="color:white; font-size:1.5rem; font-weight:700; margin-bottom:0.5rem;">@lang('home.or_contact_directly')</h2>
         <p style="color:rgba(255,255,255,0.75); margin-bottom:1.5rem;">hello@wafflenetwork.my | +60 11-1234 5678</p>
-        <a href="mailto:hello@wafflenetwork.my" class="btn-white">@lang('home.email_us')</a>
+        <a href="mailto:hello@wafflenetwork.my?subject=Website%20Inquiry" class="btn-white">@lang('home.email_us')</a>
     </section>
 
     {{-- ===== FOOTER ===== --}}

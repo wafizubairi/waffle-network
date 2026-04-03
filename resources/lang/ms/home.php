@@ -33,6 +33,7 @@ return [
     'message' => 'Mesej *',
     'message_placeholder' => 'Ceritakan lebih lanjut tentang keperluan kau...',
     'send_message' => 'Hantar Mesej →',
+    'email_us' => 'Hantar Emel',
     'or_contact_directly' => '📞 Atau Hubungi Kami Terus',
     'privacy' => 'Privasi',
     'terms' => 'Terma',

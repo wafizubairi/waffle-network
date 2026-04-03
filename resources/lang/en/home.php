@@ -33,6 +33,7 @@ return [
     'message' => 'Message *',
     'message_placeholder' => 'Tell us more about your needs...',
     'send_message' => 'Send Message →',
+    'email_us' => 'Email Us',
     'or_contact_directly' => '📞 Or Contact Us Directly',
     'privacy' => 'Privacy',
     'terms' => 'Terms',
