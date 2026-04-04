@@ -125,7 +125,8 @@
         .footer-links a:hover { color: var(--primary); }
 
         /* REVEAL ANIMATION */
-        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.animate-out { opacity: 0; transform: translateY(24px); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; }
         .delay-3 { transition-delay: 0.3s; } .delay-4 { transition-delay: 0.4s; }
@@ -224,30 +225,18 @@
             document.getElementById('ham').classList.toggle('open');
         }
 
-        // Make all reveal elements visible on page load
-        function initReveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(el => {
-                el.classList.add('visible');
-                const obs = new IntersectionObserver(entries => {
-                    entries.forEach(e => {
-                        if (e.isIntersecting) {
-                            e.target.classList.add('visible');
-                        }
-                    });
-                }, { threshold: 0.1 });
-                obs.observe(el);
+        // Scroll reveal animations
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                }
             });
-        }
+        }, { threshold: 0.1 });
 
-        // Run on DOM ready
-        if (typeof window !== 'undefined') {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initReveal);
-            } else {
-                initReveal();
-            }
-        }
+        document.querySelectorAll('.reveal').forEach(el => {
+            obs.observe(el);
+        });
     </script>
 
     @yield('scripts')
