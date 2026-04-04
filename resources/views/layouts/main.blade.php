@@ -223,17 +223,31 @@
             document.getElementById('mobileNav').classList.toggle('open');
             document.getElementById('ham').classList.toggle('open');
         }
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => {
-            obs.observe(el);
-            // Trigger immediately if element is already in viewport
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
+
+        // Make all reveal elements visible on page load
+        function initReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
                 el.classList.add('visible');
+                const obs = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                obs.observe(el);
+            });
+        }
+
+        // Run on DOM ready
+        if (typeof window !== 'undefined') {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initReveal);
+            } else {
+                initReveal();
             }
-        });
+        }
     </script>
 
     @yield('scripts')
