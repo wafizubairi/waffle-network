@@ -744,6 +744,7 @@
         </a>
 
         <ul class="nav-links">
+            <li><a href="/">Home</a></li>
             <li><a href="/services">@lang('home.services')</a></li>
             <li><a href="/portfolio">@lang('home.portfolio')</a></li>
             <li><a href="/about">@lang('home.about_us')</a></li>
@@ -765,10 +766,11 @@
     </nav>
 
     <div class="mobile-nav" id="mobileNav">
+        <a href="/" onclick="toggleMenu()">Home</a>
         <a href="/services" onclick="toggleMenu()">@lang('home.services')</a>
         <a href="/portfolio" onclick="toggleMenu()">@lang('home.portfolio')</a>
         <a href="/about" onclick="toggleMenu()">@lang('home.about_us')</a>
-        <a href="/#contact" onclick="toggleMenu()">@lang('home.contact')</a>
+        <a href="/#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
     {{-- ===== HERO ===== --}}

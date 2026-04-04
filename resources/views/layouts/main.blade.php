@@ -169,12 +169,12 @@
             <li><a href="/services" class="{{ request()->is('services') ? 'active' : '' }}">Services</a></li>
             <li><a href="/portfolio" class="{{ request()->is('portfolio') ? 'active' : '' }}">Portfolio</a></li>
             <li><a href="/about" class="{{ request()->is('about') ? 'active' : '' }}">About Us</a></li>
-            <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
+            <li><a href="/#contact" class="nav-cta">Contact</a></li>
             <li><button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button></li>
         </ul>
 
         <div style="display:flex;align-items:center;gap:10px;">
-            <button class="theme-btn" onclick="toggleTheme()" id="themeBtnMob">🌙</button>
+            <button class="theme-btn" onclick="toggleTheme()" id="themeBtnMob">🌙 Dark</button>
             <div class="hamburger" id="ham" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
@@ -186,7 +186,7 @@
         <a href="/services" onclick="toggleMenu()">Services</a>
         <a href="/portfolio" onclick="toggleMenu()">Portfolio</a>
         <a href="/about" onclick="toggleMenu()">About Us</a>
-        <a href="/#contact" onclick="toggleMenu()">Contact Us</a>
+        <a href="/#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
     @yield('content')
@@ -205,14 +205,14 @@
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
             document.getElementById('themeBtn').textContent = isDark ? '🌙 Dark' : '☀️ Light';
-            document.getElementById('themeBtnMob').textContent = isDark ? '🌙' : '☀️';
+            document.getElementById('themeBtnMob').textContent = isDark ? '🌙 Dark' : '☀️ Light';
             localStorage.setItem('theme', isDark ? 'light' : 'dark');
         }
         const saved = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', saved);
         if (saved === 'dark') {
             document.getElementById('themeBtn').textContent = '☀️ Light';
-            document.getElementById('themeBtnMob').textContent = '☀️';
+            document.getElementById('themeBtnMob').textContent = '☀️ Light';
         }
         function toggleMenu() {
             document.getElementById('mobileNav').classList.toggle('open');
