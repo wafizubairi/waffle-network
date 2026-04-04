@@ -747,7 +747,7 @@
             <li><a href="/services">@lang('home.services')</a></li>
             <li><a href="/portfolio">@lang('home.portfolio')</a></li>
             <li><a href="/about">@lang('home.about_us')</a></li>
-            <li><a href="/#contact" class="nav-cta">@lang('home.contact')</a></li>
+            <li><a href="/#contact" class="nav-cta">Contact</a></li>
             <li>
                 <select onchange="location = this.value" class="theme-btn" style="border:1px solid var(--border); background:var(--bg-card);">
                     <option value="{{ route('lang.swap', 'en') }}" {{ app()->getLocale() === 'en' ? 'selected' : '' }}>English</option>
@@ -757,7 +757,7 @@
         </ul>
 
         <div style="display:flex;align-items:center;gap:10px;">
-            <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+            <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
             <div class="hamburger" id="ham" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
@@ -1170,21 +1170,21 @@
         function toggleTheme() {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            const icon = isDark ? '🌙' : '☀️';
+            const text = isDark ? '🌙 Dark' : '☀️ Light';
             const themeBtn = document.getElementById('themeBtn');
-            if (themeBtn) themeBtn.textContent = icon;
+            if (themeBtn) themeBtn.textContent = text;
             const themeBtnMob = document.getElementById('themeBtnMob');
-            if (themeBtnMob) themeBtnMob.textContent = icon;
+            if (themeBtnMob) themeBtnMob.textContent = text;
             localStorage.setItem('theme', isDark ? 'light' : 'dark');
         }
         const saved = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', saved);
 
         const themeBtn = document.getElementById('themeBtn');
-        if (themeBtn) themeBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        if (themeBtn) themeBtn.textContent = saved === 'dark' ? '☀️ Light' : '🌙 Dark';
 
         const themeBtnMob = document.getElementById('themeBtnMob');
-        if (themeBtnMob) themeBtnMob.textContent = saved === 'dark' ? '☀️' : '🌙';
+        if (themeBtnMob) themeBtnMob.textContent = saved === 'dark' ? '☀️ Light' : '🌙 Dark';
 
         // Mobile menu
         function toggleMenu() {
