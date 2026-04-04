@@ -744,10 +744,10 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#services">@lang('home.services')</a></li>
-            <li><a href="#portfolio">@lang('home.portfolio')</a></li>
-            <li><a href="#about">@lang('home.about_us')</a></li>
-            <li><a href="#contact" class="nav-cta">@lang('home.contact')</a></li>
+            <li><a href="/services">@lang('home.services')</a></li>
+            <li><a href="/portfolio">@lang('home.portfolio')</a></li>
+            <li><a href="/about">@lang('home.about_us')</a></li>
+            <li><a href="/#contact" class="nav-cta">@lang('home.contact')</a></li>
             <li>
                 <select onchange="location = this.value" class="theme-btn" style="border:1px solid var(--border); background:var(--bg-card);">
                     <option value="{{ route('lang.swap', 'en') }}" {{ app()->getLocale() === 'en' ? 'selected' : '' }}>English</option>
@@ -765,10 +765,10 @@
     </nav>
 
     <div class="mobile-nav" id="mobileNav">
-        <a href="#services" onclick="toggleMenu()">@lang('home.services')</a>
-        <a href="#portfolio" onclick="toggleMenu()">@lang('home.portfolio')</a>
-        <a href="#about" onclick="toggleMenu()">@lang('home.about_us')</a>
-        <a href="#contact" onclick="toggleMenu()">@lang('home.contact')</a>
+        <a href="/services" onclick="toggleMenu()">@lang('home.services')</a>
+        <a href="/portfolio" onclick="toggleMenu()">@lang('home.portfolio')</a>
+        <a href="/about" onclick="toggleMenu()">@lang('home.about_us')</a>
+        <a href="/#contact" onclick="toggleMenu()">@lang('home.contact')</a>
     </div>
 
     {{-- ===== HERO ===== --}}
