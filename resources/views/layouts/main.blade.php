@@ -170,7 +170,12 @@
             <li><a href="/portfolio" class="{{ request()->is('portfolio') ? 'active' : '' }}">Portfolio</a></li>
             <li><a href="/about" class="{{ request()->is('about') ? 'active' : '' }}">About Us</a></li>
             <li><a href="/#contact" class="nav-cta">Contact</a></li>
-            <li><button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button></li>
+            <li>
+                <select onchange="location = this.value" class="theme-btn" style="border:1px solid var(--border); background:var(--bg-card);">
+                    <option value="{{ route('lang.swap', 'en') }}" {{ app()->getLocale() === 'en' ? 'selected' : '' }}>English</option>
+                    <option value="{{ route('lang.swap', 'ms') }}" {{ app()->getLocale() === 'ms' ? 'selected' : '' }}>Bahasa Melayu</option>
+                </select>
+            </li>
         </ul>
 
         <div style="display:flex;align-items:center;gap:10px;">
